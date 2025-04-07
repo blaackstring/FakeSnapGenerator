@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import Authrouter from './Routes/AuthRoute.js';
 dotenv.config();
 import cors from 'cors'
-import path from 'path'
+import path, { dirname } from 'path'
 
 console.log(process.env.MONGODB_URL)
 console.log(process.env.MONGODB_NAME);
@@ -26,9 +26,11 @@ app.use(cors({
 
 
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'src', 'frontend', 'dist')));
+console.log(__dirname);
+
+app.use(express.static(path.join(__dirname, '..', 'frontend', 'dist')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src', 'frontend', 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'dist', 'index.html'));
 });
 
 
