@@ -3,14 +3,10 @@
   "version": "1.0.0",
 "main": "index.js",
   "type": "module",
-"scripts": {
-  "dev": "node backend/index.js",
-  "start": "npm run build && node backend/index.js",
-"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
-
-}
-
-,
+  "scripts": {
+    "start": "node backend/index.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
