@@ -1,0 +1,70 @@
+.leftarrow{
+    background-image: url('../assets/leftarrow.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.userimage{
+    background-image: url('../assets/Userimg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dailer{
+    background-image: url('../assets/dailer.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.cameraicon{
+    background-image: url('../assets/photo-snap.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.locicon {
+    background-image: url('../assets/icone-bas-droite-snap.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.micro {
+    background-image: url('../assets/micro-snap.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.pics{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.ssclass {
+    color: #000 !important; /* fallback */
+  }
+  .chats {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  }
+  
+  .chats::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .battery {
+    background-image: url('../assets/charge_11656979.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .iphonebattery{
+    background-image: url('../assets/batterie40.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
