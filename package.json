@@ -5,10 +5,10 @@
   "type": "module",
 "scripts": {
   "dev": "node backend/index.js",
-  "start": "node index.js",
-"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend && ls frontend/dist"
-
+  "start": "node backend/index.js",
+  "build": "npm ci && npm ci --prefix frontend && npm run build --prefix frontend"
 }
+
 ,
   "author": "",
   "license": "ISC",
