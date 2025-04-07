@@ -3,7 +3,7 @@ import { DbConnect } from './DB/DbConnect.js';
 import dotenv from "dotenv";
 import cookieParser from 'cookie-parser';
 import Authrouter from './Routes/AuthRoute.js';
-dotenv.config({path:"../.env"});
+dotenv.config();
 import cors from 'cors'
 import path from 'path'
 
@@ -23,6 +23,7 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
 }))
+
 
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
