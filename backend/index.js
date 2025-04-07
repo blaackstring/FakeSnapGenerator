@@ -24,7 +24,7 @@ app.use(cors({
     allowedHeaders: ["Content-Type", "Authorization"],
 }))
 
-
+app.use(express.static(path.join(__dirname, "frontend", "dist")));
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
