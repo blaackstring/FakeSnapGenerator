@@ -5,8 +5,9 @@
   "type": "module",
 "scripts": {
   "dev": "node backend/index.js",
-  "start": "node backend/index.js",
-  "build": "npm ci && npm ci --prefix frontend && npm run build --prefix frontend"
+  "start": "npm run build && node backend/index.js",
+"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+
 }
 
 ,
