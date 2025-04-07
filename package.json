@@ -1,7 +1,7 @@
 {
   "name": "task-1",
   "version": "1.0.0",
-"main": "backend/index.js",
+"main": "index.js",
   "type": "module",
 "scripts": {
   "dev": "node backend/index.js",
