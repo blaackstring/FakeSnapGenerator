@@ -34,10 +34,9 @@ app.get("*", (req, res) => {
 
 app.use('/api/auth',Authrouter);
 
-app.get('/',(req,res)=>{
-    res.send('Hello World');
-})
-
-app.listen(3000,()=>{
-    console.log('Server is running on port 3000')
-})
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`)
+}).catch(err => {
+    console.error("❌ Database connection failed:", err);
+});
