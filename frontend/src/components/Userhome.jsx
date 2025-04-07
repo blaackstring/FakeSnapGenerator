@@ -137,7 +137,7 @@ navigate('/login');
         <div className='w-[100vw] h- flex justify-center items-center flex-col'>
            
    <nav className='w-full flex justify-end items-center pr-2 pt-1 border-b-1 p-1'>
-   <div className='w-full font-bold text-center'>FAKESNAP-GENERATOR</div>
+ <div className='w-full font-bold text-center bg-white/40 text-black'>FAKESNAP-GENERATOR</div>
     <span className='bg-black text-white justify-center flex items-center mr-2 p-2 min-w-fit'>Welcome-{selector.username}</span>
     <button onClick={lgout} className=' h-[5vh] bg-blue-950 text-white p-3 cursor-pointer'>Logout</button>
 
