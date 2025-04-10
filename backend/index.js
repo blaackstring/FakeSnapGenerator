@@ -21,7 +21,7 @@ const app = express();
 
 // CORS settings - switch based on environment
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5174',
+  origin:"https://fakesnapgenerator.onrender.com" || 'http://localhost:5174',
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
