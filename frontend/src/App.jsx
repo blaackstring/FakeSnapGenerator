@@ -18,6 +18,7 @@ function App() {
         .then(res => res.json())
         .then(data => {
          console.log(data);
+          console.log("Hello");
          if (data.isAuthenticated) {
           dispatch(UserInfo({ ...data.User }));
           const publicRoutes = ["/resetPassword"];
