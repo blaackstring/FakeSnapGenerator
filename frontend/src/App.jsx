@@ -31,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <div className="w-[98vw] justify-center p-1 bg-amber-400/70 overflow-hidden  min-h-[100vh] flex flex-col">
+    <div className="w-full justify-center p-1 bg-amber-400/70 overflow-hidden  min-h-[100vh] flex flex-col">
       {/* Navbar */}
       <div className="w-screen flex top-1 justify-center absolute">
         <div
