@@ -31,15 +31,12 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full justify-center p-1 bg-amber-400/70 overflow-hidden  min-h-[100vh] flex flex-col">
+    <div className="min-h-screen w-full flex flex-col justify-start items-center bg-amber-400/70 overflow-x-hidden overflow-y-auto p-1">
+      
       {/* Navbar */}
-      <div className="w-screen flex top-1 justify-center absolute">
-        <div
-          className={`w-screen flex top-1 justify-center absolute ${
-            selector.loggedin !== true ? "block" : "hidden"
-          }`}
-        >
-          <nav className="min-w-[50%] flex justify-around items-center backdrop-blur-md bg-white/10 rounded-xl lg:text-xl font-bold">
+      {selector.loggedin !== true && (
+        <div className="w-full flex justify-center fixed top-0 left-0 z-50">
+          <nav className="min-w-[50%] flex justify-around items-center backdrop-blur-md bg-white/10 rounded-xl lg:text-xl font-bold p-2 mt-2">
             <Link
               to="/login"
               className={`${
@@ -62,22 +59,25 @@ function App() {
             </Link>
           </nav>
         </div>
-      </div>
+      )}
 
       {/* Fake Snap Generator Info */}
       {selector.loggedin !== true && (
-        <div className="mt-20 w-[95vw] flex justify-center items-center">
+        <div className="mt-18 w-[95vw] flex justify-center items-center">
           <div className="bg-white/30 text-black backdrop-blur-sm px-6 py-4 rounded-xl shadow-lg max-w-xl text-center">
-            <h2 className="text-2xl font-bold mb-2">Welcome to the Fake Snap Generator 📸</h2>
+            <h2 className="text-2xl font-bold mb-2">
+              Welcome to the Fake Snap Generator 📸
+            </h2>
             <p className="text-md">
-              Easily create realistic fake snaps and prank your friends! Login or Signup to get started and have fun with custom-generated screenshots.
+              Easily create realistic fake snaps and prank your friends! Login or
+              Signup to get started and have fun with custom-generated screenshots.
             </p>
           </div>
         </div>
       )}
 
       {/* Main Content */}
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center mt-6 w-full px-4">
         <Outlet />
       </div>
     </div>
