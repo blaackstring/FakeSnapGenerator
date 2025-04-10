@@ -143,7 +143,7 @@ console.log(USER);
             subject: "Password Reset Request",
             html: `
         <p> Click the link below to proceed:</p>
-        <p><a href="https://fakesnapgenerator.onrender.com/${token}" target="_blank" style="color: blue; text-decoration: underline;">
+        <p><a href="https://fakesnapgenerator.onrender.com/resetPassword/${token}" target="_blank" style="color: blue; text-decoration: underline;">
             Reset Your Password
         </a></p>
       `,
