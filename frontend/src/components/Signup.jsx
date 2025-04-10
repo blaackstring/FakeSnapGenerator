@@ -23,7 +23,7 @@ const handleSubmit = async (e) => {
     const fetchData = await SignupController(formdata); // Call API
     console.log(fetchData);
 
-    if (fetchData.success) {  // FIX: Use fetchData.success instead of formdata.success
+    if (fetchData.sucess) {  // FIX: Use fetchData.success instead of formdata.success
       navigate("/login");
       toast.success('🦄 Signup Successful!', {
         position: "top-right",
