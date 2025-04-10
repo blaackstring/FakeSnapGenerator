@@ -14,6 +14,7 @@ function App() {
     fetch("/api/auth/check-session", { method:"GET",credentials: "include" })
       .then((res) => res.json())
       .then((data) => {
+        console.log("FROM CHECKSESION");
         console.log(data);
         if (data.isAuthenticated) {
           dispatch(UserInfo({ ...data.User }));
