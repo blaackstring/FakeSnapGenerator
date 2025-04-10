@@ -31,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full justify-center bg-amber-400/70 overflow-hidden min-h-[100vh] flex flex-col">
+    <div className="w-full justify-center p-1 bg-amber-400/70 overflow-hidden min-h-[100vh] flex flex-col">
       {/* Navbar */}
       <div className="w-screen flex top-1 justify-center absolute">
         <div
@@ -66,7 +66,7 @@ function App() {
 
       {/* Fake Snap Generator Info */}
       {selector.loggedin !== true && (
-        <div className="mt-28 w-full flex justify-center items-center">
+        <div className="mt-20 w-[95vw] flex justify-center items-center">
           <div className="bg-white/30 text-black backdrop-blur-sm px-6 py-4 rounded-xl shadow-lg max-w-xl text-center">
             <h2 className="text-2xl font-bold mb-2">Welcome to the Fake Snap Generator 📸</h2>
             <p className="text-md">
