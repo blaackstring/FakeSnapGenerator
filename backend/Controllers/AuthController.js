@@ -118,7 +118,7 @@ export const forgetPassword = async (req, res) => {
         })
 
         const USER = await User.find({ email });
-
+console.log(USER);
         if (!USER) return res.status(200).send({
             success: false,
             message: "User not found in Database"
