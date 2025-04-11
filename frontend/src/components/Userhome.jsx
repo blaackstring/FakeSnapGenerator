@@ -44,7 +44,7 @@ const verifyUser = () => async (dispatch) => {
       if (!res.ok) {
           throw new Error("Failed to verify");
       }
-      const { message, user } = fres
+      const { message, user } = res
    console.log(res);
       dispatch(UserInfo({ ...user }))
 
