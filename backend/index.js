@@ -6,7 +6,7 @@ import Authrouter from './Routes/AuthRoute.js';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import Verifyrouter from './Routes/verifyRoutes.js';
+import Verifyrouter from './Routes/verifyRoute.js';
 
 // Load .env variables
 dotenv.config();
