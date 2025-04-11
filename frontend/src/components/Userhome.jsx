@@ -7,6 +7,7 @@ import { logout } from '../Controllers/AuthControllers';
 import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { UserLogOut } from '../store/userdetails';
+import { UserInfo } from '../store/userdetails';
 import Ui from './Ui';
 import { chatsInfo } from '../store/chats';
 import SS from './SS';
