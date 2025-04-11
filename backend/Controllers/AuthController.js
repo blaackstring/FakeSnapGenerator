@@ -97,7 +97,7 @@ export const checkSession = (req, res) => {
     try {
         console.log(req.user);
         if (!req.user) return res.status(401).json({ isAuthenticated: false });
-        res.status(200).json({ isAuthenticated: true, User: req.user });
+       return   res.status(200).send({ isAuthenticated: true, User: req.user });
     } catch (error) {
         console.log(error)
         req.status(500).send({
