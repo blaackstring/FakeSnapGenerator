@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
 
     console.log("Hello");
-    fetch("/api/auth/check-session", {method:"GET", credentials: "include" })
+    fetch("https://fakesnapgenerator.onrender.com/api/auth/check-session", {method:"GET", credentials: "include" })
         .then(res => res.json())
         .then(data => {
          console.log(data);
