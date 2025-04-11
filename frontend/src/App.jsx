@@ -11,29 +11,29 @@ function App() {
 
   // 🔥 Fetch user on app load
 
-  useEffect(() => {
+//   useEffect(() => {
 
-    console.log("Hello");
-    fetch("api/auth/check-session", {method:"GET", credentials: "include" })
-        .then(res => res.json())
-        .then(data => {
-         console.log(data);
-          console.log("Hello");
-         if (data.isAuthenticated) {
-          dispatch(UserInfo({ ...data.User }));
-          const publicRoutes = ["/resetPassword"];
-          const isPublicRoute = publicRoutes.some(route =>
-            location.pathname.startsWith(route)
-          );
+//     console.log("Hello");
+//     fetch("api/auth/check-session", {method:"GET", credentials: "include" })
+//         .then(res => res.json())
+//         .then(data => {
+//          console.log(data);
+//           console.log("Hello");
+//          if (data.isAuthenticated) {
+//           dispatch(UserInfo({ ...data.User }));
+//           const publicRoutes = ["/resetPassword"];
+//           const isPublicRoute = publicRoutes.some(route =>
+//             location.pathname.startsWith(route)
+//           );
           
-          if (!isPublicRoute) {
-            navigate("/userhome", { replace: true, state: true });
-          }
-        }
+//           if (!isPublicRoute) {
+//             navigate("/userhome", { replace: true, state: true });
+//           }
+//         }
 
-        })
-        .catch(err => console.error(err));
-}, []);
+//         })
+//         .catch(err => console.error(err));
+// }, []);
 
   return (
     <div className="min-h-screen w-full flex flex-col justify-start items-center bg-amber-400/70 overflow-x-hidden overflow-y-auto p-1">
