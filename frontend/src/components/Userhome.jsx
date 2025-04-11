@@ -31,7 +31,39 @@ useEffect(()=>{
     }
 })
 
+   
+const verifyUser = () => async (dispatch) => {
+  try {
+      console.log("⚡ Fetching user data...");
+      
+      const res = await fetch(`/api/verify/verifyuser`, {
+          method: "GET",
+          credentials: "include",
+      });
 
+      if (!res.ok) {
+          throw new Error("Failed to verify");
+      }
+      const { message, user } = fres
+   console.log(res);
+      dispatch(UserInfo({ ...user }))
+
+
+  } catch (error) {
+      console.log("❌ Verification failed", error);
+      dispatch(UserLogOut()); 
+     navigate('/login');
+  }
+};
+
+
+
+
+  useEffect(() => {
+    dispatch(verifyUser());
+  }, [dispatch]);
+
+   
 const lgout=async()=>{
 const res=await logout();
 if(!res.success) return toast.warning("unable to logout ")
