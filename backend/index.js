@@ -6,6 +6,7 @@ import Authrouter from './Routes/AuthRoute.js';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import Verifyrouter from './Routes/verifyRoutes.js';
 
 // Load .env variables
 dotenv.config();
@@ -42,6 +43,8 @@ app.get('*', (req, res) => {
 
 // Auth routes
 app.use('/api/auth', Authrouter);
+
+app.use('/api/verify',Verifyrouter);
 
 // Fallback route
 app.get('/', (req, res) => {
