@@ -4,7 +4,7 @@ import { authmiddleware } from '../middleware/authmiddleware.js';
 
 const Verifyrouter = express.Router();
 
-Verifyrouter.get("/verifyuser", authMiddleware, (req, res) => {
+Verifyrouter.get("/verifyuser",  authmiddleware, (req, res) => {
  try{
 
     res.json({ user: req.user });
